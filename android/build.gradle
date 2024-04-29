@@ -23,6 +23,9 @@ allprojects {
         mavenCentral()
     }
 }
+task bundledebug {
+    // Task configuration goes here
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
