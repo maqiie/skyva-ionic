@@ -25,7 +25,12 @@ allprojects {
 }
 task bundledebug {
     // Task configuration goes here
+    doLast {
+        println "Executing bundledebug task..."
+        // Add your task actions here
+    }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
