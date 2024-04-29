@@ -1,0 +1,19 @@
+.input-field {
+  color: #000; /* Set text color to black */
+
+    border: 1px solid #ced4da; /* Add a solid border */
+    border-radius: 0.25rem; /* Add border-radius for rounded corners */
+    padding: 0.5rem; /* Add padding for spacing */
+    width: 100%; /* Ensure the input takes up full width */
+    transition: border-color 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .input-field:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #4a90e2; /* Change border color on focus */
+  }
+  
+  .input-field:hover {
+    border-color: #adb5bd; /* Change border color on hover */
+  }
+  

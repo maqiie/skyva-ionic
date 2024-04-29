@@ -1,0 +1,169 @@
+
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #000000;
+  color: #09d7c9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-left .brand {
+  color: #09f3df;
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+/* Navbar.css */
+
+/* Add styles for the logout button */
+.navbar-right button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.navbar-right button:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Add styles for the active link */
+.navbar-right a.active {
+  color: #ffcc00; /* Change the color for the active link */
+}
+
+/* Add styles for the cart and user icons */
+.cart1,
+.user {
+  font-size: 1.5em;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-left .brand {
+    margin-bottom: 10px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+  }
+
+  .navbar-right a {
+    font-size: 1em;
+  }
+
+  /* Add additional styles for smaller screens as needed */
+}
+
+/* Style for the logout button */
+.navbar .user-info .Btn1 {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  /* border: 2px solid #fff; Add border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 40px; /* Add border radius */
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.navbar .user-info .Btn1:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+}
+
+.navbar .user-info .Btn1 .logout {
+  font-size: 14px;
+  margin-left: 5px; /* Add margin */
+}
+/* Responsive Styles for Small Screens */
+
+@media only screen and (max-width: 768px) {
+  /* Style for the logout button */
+  .navbar .user-info .Btn1 {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar .user-info .Btn1 .logout {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+}
+/* Navbar.css */
+
+/* Style for the logout button */
+.navbar .user-info .Btn1 {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  /* border: 2px solid #fff; Add border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 40px; /* Add border radius */
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.navbar .user-info .Btn1:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
+}
+
+.navbar .user-info .Btn1 .logout {
+  font-size: 14px;
+  margin-left: 5px; /* Add margin */
+}
+
+/* Style for links inside user-info when logged in */
+.navbar.logged-in .user-info {
+  display: flex;
+  justify-content: space-between; /* Align items evenly */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Set width to 100% */
+  padding: 0 20px; /* Add padding to create space */
+}
+
+.navbar.logged-in .user-info a {
+  color: #fff; /* Change color of links when logged in to white */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
+  transition: color 0.3s ease; /* Add transition effect for color change */
+}
+
+.navbar.logged-in .user-info a:hover {
+  color: #ffcc00; /* Change color of links on hover to yellow */
+}
+
+/* Style for the Favorites link */
+.navbar.logged-in .user-info .favorite-link {
+  color: #ffcc00; /* Change color of Favorites link */
+  text-emphasis: none;
+  text-decoration: dashed;
+}

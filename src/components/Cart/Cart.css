@@ -1,0 +1,44 @@
+/* Cart.css */
+.custom-cart {
+  background-color: #f3f4f6; /* Set a light gray background color */
+}
+
+.custom-cart h2 {
+  color: #333; /* Set a dark color for the heading */
+}
+
+.cart-item-details p {
+  color: #555; /* Set a slightly darker color for item details */
+}
+
+.cart-total {
+  color: #333; /* Set a dark color for the total */
+}
+
+.order-now-button {
+  background-color: #1e4e8c; /* Set a blue color for the checkout button */
+  color: #fff; /* Set white color for text */
+}
+
+.button-remove {
+  color: #e53e3e; /* Set a red color for remove button text */
+}
+
+.cart-cta {
+  color: #1e4e8c; /* Set a blue color for continue shopping text */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .custom-cart {
+    padding: 20px; /* Increase padding for better spacing on small screens */
+  }
+
+  .cart-item-details p {
+    font-size: 14px; /* Decrease font size for item details on small screens */
+  }
+
+  .order-now-button {
+    padding: 12px 24px; /* Adjust button padding on small screens */
+  }
+}

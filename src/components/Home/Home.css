@@ -1,0 +1,331 @@
+/* Resetting default styles and applying a box-sizing border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variable definitions */
+:root {
+  --background-dark: #2d3548;
+  --text-light: rgba(255, 255, 255, 0.8);
+  --text-lighter: rgba(255, 255, 255, 1);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+/* Base styling for the entire page */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+  color: var(--text-light);
+}
+
+/* Container for the entire page */
+.home-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-m);
+}
+
+Header image and text styling 
+ .image-container {
+  position: relative;
+  width: 100%;
+  margin-top: var(--spacing-xl);
+  
+}
+
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--spacing-m);
+  margin-top: 50px;
+}
+
+
+
+.background-slider {
+  margin-top: 25px;
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the slider takes up the full height */
+  
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire slider */
+  transition: transform 0.5s ease; /* Add a transition effect */
+  border-radius: 40px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1; /* Ensure the navigation arrows appear above the images */
+}
+
+.slick-prev {
+  left: 10px; /* Adjust the position of the previous arrow */
+}
+
+.slick-next {
+  right: 10px; /* Adjust the position of the next arrow */
+}
+
+
+/* Newest Products section styling */
+.new {
+  margin-top: var(--spacing-l);
+  text-align: center;
+}
+
+/* Product cards styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--spacing-l);
+}
+
+.card1 {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: var(--spacing-m);
+  margin: 0 var(--spacing-m) var(--spacing-m) 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card1:hover {
+  transform: scale(1.05);
+}
+
+.card1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: var(--spacing-s);
+}
+
+.card1 p {
+  margin: 0;
+}
+
+/* Hero section with category cards styling */
+.hero-section {
+  width: 100%;
+  /* background-color: #06e2d7; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-m);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-m);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+.card {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-m);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-m);
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.5em;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+/* Google Maps section styling */
+.maps {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  margin-bottom: var(--spacing-m);
+}
+
+/* ... (your existing CSS) */
+
+.button-container {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #07edda;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #08ebd0;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.button-container:hover {
+  color: rgb(255, 255, 255);
+  box-shadow: inset 0 -100px 0 0 #09f0e4;
+}
+
+.button-container:active {
+  transform: scale(0.9);
+}
+.collection-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .collection-heading {
+    font-size: 100px;
+  }
+}
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+  .button-container {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .collection-heading {
+    font-size: 20px;
+  }
+  .background-image{
+    border-radius: 10% / 50%;
+  }
+}
+
+/* Additional media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .center {
+    font-size: 1.5em;
+    margin-top: var(--spacing-m);
+    text-align: center; /* Center text on smaller screens */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+  }
+
+  .new,
+  .card-container {
+    margin-top: var(--spacing-m);
+  }
+
+  .card1 {
+    margin: 0 0 var(--spacing-m) 0;
+  }
+
+  .cta-button {
+    margin-top: var(--spacing-m);
+    font-size: 1.2em;
+    width: 80%; /* Adjust the width for responsiveness */
+    text-align: center; /* Center the button */
+    margin-left: 10%; /* Adjust the left margin for centering */
+  }
+}
+
+/* ... (your other CSS styles) */
+
+
+
+/* Additional media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .center {
+    font-size: 1.5em;
+    margin-top: var(--spacing-m);
+  }
+
+  .new,
+  .card-container {
+    margin-top: var(--spacing-m);
+  }
+
+  .card1 {
+    margin: 0 0 var(--spacing-m) 0;
+  }
+
+  .cta-button {
+    margin-top: var(--spacing-m);
+    font-size: 1.2em;
+  }
+}
+
+/* Additional media query for smaller screens */
+@media only screen and (max-width: 480px) {
+  .a1 {
+    padding: var(--spacing-s) var(--spacing-m);
+    font-size: 1em;
+  }
+}
+
+
